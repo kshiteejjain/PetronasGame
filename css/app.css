@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Museo Sans 100';
+    src:url('../assets/fonts/../assets/fonts/MuseoSans-100.woff') format('woff2'),
+       url('../assets/fonts/MuseoSans-100.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans 300';
+    src:url('../assets/fonts/MuseoSans-300.woff2') format('woff2'),
+       url('../assets/fonts/MuseoSans-300.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans 500';
+    src:url('../assets/fonts/MuseoSans-500.woff2') format('woff2'),
+       url('../assets/fonts/MuseoSans-500.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Museo Sans 700';
+    src:url('../assets/fonts/MuseoSans-700.woff2') format('woff2'),
+       url('../assets/fonts/MuseoSans-700.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Museo Sans 300';
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+   min-height: 85%;
+    padding: 0 10%;
+    justify-content: space-between;
+    position: relative;
+}
+.wrapper:before {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 250px;
+    background: url(../assets/images/Left_Element_BG.png) no-repeat !important;
+    left: 0px;
+    top: -50px;
+    z-index: -1;
+}
+.wrapper:after {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 250px;
+    background: url(../assets/images/Right_Element_BG.png) no-repeat !important;
+    right: 0px;
+    bottom: -40px;
+    z-index: -1;
+}
+.logo img{
+    width: 150px;
+}
+header{
+    background-color: #28323c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 15px 40px;
+}
+h1{
+    font-family: 'Museo Sans 700';
+    font-size: 48px;
+    color: #333333;
+    margin: 0;
+}
+p{
+    font-size: 20px;
+}
+#bucket img{
+    max-height: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#TemperaturePiston{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+#TemperaturePiston img{
+    max-height: 200px;
+}
+#pistonDiv{
+    width: 12px;
+    background-color: #b40101;
+    position: absolute;
+    right: 27px;
+    bottom: 56px;
+    z-index: 1;
+    border-radius: 7px 7px 0 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.score{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.scoreTop{
+    font-size: 24px;
+    font-family: 'Museo Sans 700';
+    display: flex;
+    margin-left: 50px;
+}
+#totalScore{
+    margin-left: 10px;
+}
+.leaderboard{
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: 'Museo Sans 700';
+}
+.gameDetails{
+    text-align: center;
+    width: 40%;
+}
+.semiBold{
+    font-family: 'Museo Sans 500';
+}
+.bold{
+    font-family: 'Museo Sans 700';
+}
+footer{
+    background-color: #00a99d;
+    padding: 10px 10%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Museo Sans 500';
+}
+footer p{
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Museo Sans 500';
+}
+.canvasWrapper{
+    width: 55%;
+}
+.canvas{
+    background-image: url(../assets/images//background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 650px;
+    position: relative;
+}
+.spinButton {
+    color: #fff;
+    font-size: 28px;
+    padding: 14px 50px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-image: linear-gradient(#00a297, #005953);
+    font-family: 'Museo Sans 700';
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+p.spin_p {
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    font-family: 'Museo Sans 500';
+    width: 85%;
+    margin: 20px auto;
+}
+.instructions{
+    color: #00a297;
+    font-size: 20px;
+    padding-top: 20px;
+    font-family: 'Museo Sans 500';
+}
+#bubbleImage{
+    max-width: 170px;
+}
