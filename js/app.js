@@ -24,17 +24,34 @@ let time_out = () =>  {
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d")
 function drawImage(){
-  const positionX = Math.floor(Math.random() * 700);
+  const positionX = Math.floor(Math.random() *  700);
   const positionY = Math.floor(Math.random() * 300);
-  const bubbleSize = Math.floor(Math.random() * 150);
+  const bubbleSize = Math.floor(Math.random() * (150 - 70) + 70);
   const img = new Image();
   img.onload = function(){
       ctx.drawImage(img, positionX, positionY, bubbleSize, bubbleSize);
   };
   img.src = "assets/images/bubble.svg";
 }
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 4; i++) {
   drawImage();
+  myMove();
 }
 
-  
+
+var id = null;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
