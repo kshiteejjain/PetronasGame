@@ -1,8 +1,9 @@
-let temperaturePiston = 40;
+let temperaturePiston = 0;
 let time_limit = 60;
+let bubbleScore = 100;
 
 //Temperature Meter Height
-let piston = document.getElementById("pistonDiv").style.height = temperaturePiston + "px";
+// let piston = document.getElementById("pistonDiv").style.height = temperaturePiston + "px";
 
 //Timer in seconds
 let timer = document.getElementById("timerDiv");
@@ -53,7 +54,7 @@ class Bubble{
     this.size = size;
     this.img = new Image();
     this.img.src = "assets/images/bubble.svg";
-    this.speed = Math.random();
+    this.speed = Math.random() * 2;
 
     this.img.onload = () => {
       ctx.drawImage(this.img, this.x, this.y, this.size, this.size);
@@ -134,9 +135,10 @@ setInterval(() => {
 
   bubbles.forEach(bubble => {
     bubble.move();
-    if(bubble.y > 320){
+    if(bubble.y > canvas.clientHeight - 50){
       bubble.destroy();
-      createBubble()
+      createBubble();
+      document.getElementById("pistonDiv").style.height += 10 + "px";
     }
     bubble.draw();
   })
